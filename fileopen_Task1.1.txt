@@ -1,0 +1,33 @@
+Module Module1
+
+    Sub Main()
+        Dim name, ID, Answer As String
+        Dim srno As Integer
+
+
+        srno = 0
+
+        FileOpen(1, "C:\VB files\firstone.txt", OpenMode.Output)
+
+        Answer = "Y"
+
+        Do While Answer = "Y" Or Answer = "y"
+            srno = srno + 1
+            Console.Write("Input Name:")
+            name = Console.ReadLine
+            Console.Write("Enter Id:")
+            ID = Console.ReadLine
+
+            WriteLine(1, srno)
+            WriteLine(1, name)
+            WriteLine(1, ID)
+
+            Console.WriteLine("Next record ? :(y/n)")
+            Answer = Console.ReadLine
+
+
+        Loop
+        FileClose(1)
+    End Sub
+
+End Module
